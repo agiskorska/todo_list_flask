@@ -1,0 +1,12 @@
+<form action="/update/{{ task.id }}" method="post">
+    task id: {{ task.id }}
+    <label for="task">Task Name :</label>
+        <input type="text" id="task" name="task" value="{{ task['task'] }}">
+        <textarea row="15" col="50" id="description" name="description" >{{ task.description }}</textarea>
+    <label for="lastname">Due by:</label>
+        <input type="text" id="lastname" name="due-date" value="{{ task['due-date'] }}">
+    <button type="submit">Amend the task</button>
+</form>
+<form action="/tasks/{{ task.id }}" method="post">
+    <button type="submit">delete this task</button>
+</form>
